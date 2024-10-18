@@ -133,3 +133,7 @@ h2 {
 span.highlight {
   background-color: #ffffd0;
 }
+.small-font {
+    font-size: 10px; /* 或者使用其他您想要的、比当前更小的像素值 */
+    /* 其他可能的样式，如字体样式、颜色等 */
+}

@@ -57,6 +57,63 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='nuvo_image'><video  width=100% muted autoplay loop>
+          <source src="images/drivedream4d.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+          </div>
+          <img src='images/drivedream4d.png' width=100%>
+        </div>
+        <script type="text/javascript">
+          function nuvo_start() {
+            document.getElementById('nuvo_image').style.opacity = "1";
+          }
+
+          function nuvo_stop() {
+            document.getElementById('nuvo_image').style.opacity = "0";
+          }
+          nuvo_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+         <a href="docs/1.pdf" download>
+          <span class="papertitle">DriveDreamer4D: World Models Are Effective Data Machines for 4D Driving Scene Representation</span>
+        </a>
+        <br>
+          <a>Guosheng Zhao<sup>*</sup></a>
+           <a href="https://github.com/Nichaojun" style="color: blue;">Chaojun Ni<sup>*</sup></a>,
+        <a >Xiaofeng Wang<sup>*</sup></a>,
+        <a >Zheng Zhu<sup>*</sup><span class="envelope">&#9993;</span></a>,
+        <a >Guan Huang</a>,
+        <a>Xinze Chen</a>,
+        <a >Boyuan Wang</a>,
+        <a >Youyi Zhang</a>,
+        <a >Wenjun Me</a>,
+        <a>Xingang Wang<span class="envelope">&#9993;</span></a>
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <div>
+        <em>Arxiv</em>, 2024
+    </div>
+    <div style="text-align: right;">
+        <em class="small-font">
+            <sup>*</sup>These authors contributed equally to this work
+        </em>
+    </div>
+</div>
+        <a href="https://github.com/GigaAI-research/DriveDreamer4D/">code</a>
+        /
+        <a href="https://arxiv.org/abs/2410.13571">paper</a>
+          <br>
+<div class="justified-text">
+  <em>
+    This paper introduces DriveDreamer4D, which uses world model priors to improve 4D driving scene representation. It synthesizes novel trajectory videos based on real-world data, ensuring spatial-temporal consistency of elements through structured conditions, aligning closely with <br>traffic rules.
+  </em>
+</div>
+      </td>
+    </tr>
 
     <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
@@ -125,7 +182,7 @@
         <a href="https://ieeexplore.ieee.org/document/10402716">paper</a>
         <p></p>
         <p>
-				This study introduces Feature Adaptive YOLO (FA-YOLO), a new framework for target detection that improves performance in adverse weather by enhancing image features and boundary clarity.
+				This study introduces Feature Adaptive YOLO (FA-YOLO), a new framework for target detection that improves performance in adverse weather by enhancing image features<br> and boundary clarity.
         </p>
       </td>
     </tr>
@@ -151,47 +208,47 @@
             </ul>
             </table>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <tbody>
-                <tr>
-                  <td>
-                    <h2>Photo</h2>
-                  </td>
-                </tr>
-            </tbody>
-        </table>
+<!--        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">-->
+<!--            <tbody>-->
+<!--                <tr>-->
+<!--                  <td>-->
+<!--                    <h2>Photo</h2>-->
+<!--                  </td>-->
+<!--                </tr>-->
+<!--            </tbody>-->
+<!--        </table>-->
 
-        <table width="100%" align="center" border="0" cellpadding="20">
-            <tbody>
-                    <tr>
-                      <!-- First and fourth images -->
-                      <td align="center">
-                        <figure style="margin: 0;">
-                          <img src="photo/1.jpg" alt="Competition Photo 1" style="width: 300px; height: 200px;">
-                          <figcaption style="margin-top: 0;">Figure 1: My friends Luo Wenhao, Li Menghao, and I participated in the ACM Xi'an Regional Contest.</figcaption>
-                        </figure>
-                      </td>
-                      <td align="center">
-                        <figure style="margin: 0;">
-                          <img src="photo/4.jpg" alt="Competition Photo 2" style="width: 300px; height: 200px;">
-                          <figcaption style="margin-top: 0;">Figure 2: We won a silver medal!</figcaption>
-                        </figure>
-                      </td>
-                    </tr>
-                <tr>
-                    <td align="center">
-                        <figure>
-                            <img src="photo/2.jpg" alt="Beijing Competition" style="width: 300px; height: 200px;">
-                            <figcaption>Figure 2: We participated in a competition at the University of Macau!</figcaption>
-                        </figure>
-                    </td>
-                    <td align="center">
-                        <figure>
-                            <img src="photo/3.jpg" alt="Eating Photo" style="width: 300px; height: 200px;">
-                            <figcaption>Figure 3: A photo with my mentor, Jiang Wenhui, from the year I graduated with my bachelor's degree.</figcaption>
-                        </figure>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<!--        <table width="100%" align="center" border="0" cellpadding="20">-->
+<!--            <tbody>-->
+<!--                    <tr>-->
+<!--                      &lt;!&ndash; First and fourth images &ndash;&gt;-->
+<!--                      <td align="center">-->
+<!--                        <figure style="margin: 0;">-->
+<!--                          <img src="photo/1.jpg" alt="Competition Photo 1" style="width: 300px; height: 200px;">-->
+<!--                          <figcaption style="margin-top: 0;">Figure 1: My friends Luo Wenhao, Li Menghao, and I participated in the ACM Xi'an Regional Contest.</figcaption>-->
+<!--                        </figure>-->
+<!--                      </td>-->
+<!--                      <td align="center">-->
+<!--                        <figure style="margin: 0;">-->
+<!--                          <img src="photo/4.jpg" alt="Competition Photo 2" style="width: 300px; height: 200px;">-->
+<!--                          <figcaption style="margin-top: 0;">Figure 2: We won a silver medal!</figcaption>-->
+<!--                        </figure>-->
+<!--                      </td>-->
+<!--                    </tr>-->
+<!--                <tr>-->
+<!--                    <td align="center">-->
+<!--                        <figure>-->
+<!--                            <img src="photo/2.jpg" alt="Beijing Competition" style="width: 300px; height: 200px;">-->
+<!--                            <figcaption>Figure 2: We participated in a competition at the University of Macau!</figcaption>-->
+<!--                        </figure>-->
+<!--                    </td>-->
+<!--                    <td align="center">-->
+<!--                        <figure>-->
+<!--                            <img src="photo/3.jpg" alt="Eating Photo" style="width: 300px; height: 200px;">-->
+<!--                            <figcaption>Figure 3: A photo with my mentor, Jiang Wenhui, from the year I graduated with my bachelor's degree.</figcaption>-->
+<!--                        </figure>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--            </tbody>-->
+<!--        </table>-->
 </html>
