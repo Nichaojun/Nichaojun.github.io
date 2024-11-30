@@ -57,6 +57,77 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+
+            <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='nuvo_image'><video  width=100% muted autoplay loop>
+                  <source src="images/recondreamer.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video>
+                  </div>
+                  <img src='images/recondreamer.png' width=100%>
+                </div>
+                <script type="text/javascript">
+                  function nuvo_start() {
+                    document.getElementById('nuvo_image').style.opacity = "1";
+                  }
+        
+                  function nuvo_stop() {
+                    document.getElementById('nuvo_image').style.opacity = "0";
+                  }
+                  nuvo_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                 <a href="https://drivedreamer4d.github.io/" download>
+                  <span class="papertitle">ReconDreamer: Crafting World Models for Driving Scene Reconstruction  via Online Restoration</span>
+                </a>
+                <br>
+                  
+                <a href="https://github.com/Nichaojun" style="color: blue;">Chaojun Ni<sup>*</sup></a>,
+                <a>Guosheng Zhao<sup>*</sup></a>,
+                <a >Xiaofeng Wang<sup>*</sup></a>,
+                <a >Zheng Zhu<sup>*</sup><span class="envelope">&#9993;</span></a>,
+                etc
+                <!-- <a>Wenkang Qin</a>
+                <a>Guan Huang</a>
+                <a>Chen Liu</a>
+                <a>Yuyin Chen</a>
+                <a>Yida Wang</a>
+                <a>Xueyang Zhang</a>
+                <a>Yifei Zhan</a>
+                <a>Kun Zhan</a>
+                <a>Peng Jia</a>
+                <a>Xianpeng Lang</a>
+                <a>Xingang Wang</a>
+                <a>Wenjun Mei<span class="envelope">&#9993;</span></a>
+                <a>Xingang Wang<span class="envelope">&#9993;</span></a> -->
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <em>Arxiv</em>, 2024
+            </div>
+            <div style="text-align: right;">
+                <em class="small-font">
+                    <sup>*</sup>These authors contributed equally to this work
+                </em>
+            </div>
+        </div>
+                <a href="https://github.com/GigaAI-research/DriveDreamer4D/">code</a>
+                /
+                <a href="https://arxiv.org/abs/2410.13571">paper</a>
+                  <br>
+        <div class="justified-text">
+          <em>
+            This paper introduces DriveDreamer4D, which uses world model priors to improve 4D driving scene representation. It synthesizes novel trajectory videos based on real-world data, ensuring spatial-temporal consistency of elements through structured conditions, aligning closely with <br>traffic rules.
+          </em>
+        </div>
+              </td>
+            </tr>
+        
+
+
+
     <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
