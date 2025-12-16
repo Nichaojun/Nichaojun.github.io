@@ -1,591 +1,655 @@
 <!DOCTYPE HTML>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Chenxin Li</title>
+  <meta name="author" content="Chenxin Li">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./images/horse.png"/>
+  <link rel="stylesheet" type="text/css" href="./css/jemdoc.css"/>
+  <link rel="stylesheet" type="text/css" href="./css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Pacifico&family=Satisfy&family=Great+Vibes&family=Allura&family=Alex+Brush&display=swap" rel="stylesheet">
+</head>
 
-    <title>Ni chaojun</title>
+<style>
+  .morphing-text {
+      background-image: linear-gradient(to right, 
+       #8B4513 0%, #DAA520 25%, #9370DB 50%, #FFD700 75%, #8A2BE2 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: bold;
+  }
+  
+  .center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Purple-yellow gradient border with white background */
+  .gradient-box {
+    background: white;
+    border-radius: 20px;
+    border: 3px solid;
+    border-image: linear-gradient(135deg, 
+      rgba(139, 69, 19, 0.8) 0%,
+      rgba(218, 165, 32, 0.9) 25%,
+      rgba(147, 112, 219, 0.8) 50%,
+      rgba(255, 215, 0, 0.9) 75%,
+      rgba(138, 43, 226, 0.8) 100%
+    ) 1;
+    box-shadow: 0 8px 25px rgba(147, 112, 219, 0.2);
+    position: relative;
+  }
 
-    <meta name="author" content="Ni Chaojun">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  /* Corner stars decoration */
+  .gradient-box::before,
+  .gradient-box::after {
+    content: "⭐";
+    position: absolute;
+    font-size: 24px;
+    background: linear-gradient(45deg, #8A2BE2, #FFD700, #9370DB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+    animation: twinkle 2s ease-in-out infinite alternate;
+    z-index: 10;
+  }
 
-  </head>
+  .gradient-box::before {
+    top: -18px;
+    left: -18px;
+  }
 
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Ni Chaojun
-                </p>
+  .gradient-box::after {
+    top: -18px;
+    right: -18px;
+  }
 
-                <p style="text-align: justify;">
-                    I am a Master’s student at the Complex Network Systems Lab, College of Engineering, Peking University, under the supervision of Assistant Professor <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=vXj_ULkAAAAJ&view_op=list_works&sortby=pubdate" style="color: blue;">Wenjun Mei</a>. Currently, I am interning at Giga, where my corporate mentor is <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=NmwjI0AAAAAJ&view_op=list_works&sortby=pubdate" style="color: blue;">Zhu Zheng</a>.<br><br>
+  .gradient-box .corner-star-bottom-left,
+  .gradient-box .corner-star-bottom-right {
+    position: absolute;
+    font-size: 24px;
+    background: linear-gradient(45deg, #8A2BE2, #FFD700, #9370DB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+    animation: twinkle 2s ease-in-out infinite alternate;
+    z-index: 10;
+    pointer-events: none;
+  }
 
-                    Before joining Peking University, I completed my undergraduate studies in Computer Science and Technology at Jiangxi University of Finance and Economics, where I was advised by <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=_Tu-eHkAAAAJ" style="color: blue;">Prof. Yuming Fang</a>.<br><br>
+  .gradient-box .corner-star-bottom-left {
+    bottom: -18px;
+    left: -18px;
+  }
 
-                    My primary research interests lie in autonomous driving and 3D reconstruction. Additionally, I enjoy working on exciting engineering projects and participating in algorithm competitions such as Kaggle and Codeforces.
-                </p>
+  .gradient-box .corner-star-bottom-right {
+    bottom: -18px;
+    right: -18px;
+  }
+
+  @keyframes twinkle {
+    0% {
+      opacity: 0.6;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1.15);
+    }
+  }
+  
+  /* News item styling */
+  .news-item {
+    background: linear-gradient(135deg, 
+      rgba(255, 215, 0, 0.08) 0%,
+      rgba(147, 112, 219, 0.12) 50%,
+      rgba(218, 165, 32, 0.08) 100%
+    );
+    border-left: 4px solid #9370DB;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 12px 0;
+    transition: all 0.3s ease;
+  }
+
+  .news-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(147, 112, 219, 0.2);
+  }
+
+  .news-date {
+    color: #8B4513;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-right: 10px;
+  }
+
+  .news-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  /* Enhanced publication boxes */
+  .publication-box {
+    background: linear-gradient(135deg, 
+      rgba(218, 165, 32, 0.1) 0%,
+      rgba(147, 112, 219, 0.15) 50%,
+      rgba(255, 215, 0, 0.1) 100%
+    );
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid rgba(218, 165, 32, 0.2);
+  }
+
+  .role { color: #4169e1; font-weight: 600; }
+  .result { color: #cc0000; }
+
+  .reviewer-title {
+    color: #000000;
+    margin-bottom: 4px;
+  }
+</style>
+
+<body>
+  <a id="home" class="anchor"></a>
+  <div id="container" class="container gradient-box" style="margin: 20px auto; max-width: 1020px; padding: 20px;">
+    <div class="corner-star-bottom-left">⭐</div>
+    <div class="corner-star-bottom-right">⭐</div> 
+
+    <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <tbody>
+        <tr style="padding:0px">
+          <td style="padding:0px">
+
+            <!-- Bio Section -->
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                <tr style="padding:0px">
+                  <td style="padding:2.5%;width:67%;vertical-align:middle">
+                    <p style="text-align:center;font-size: 28px">
+                      <strong>Ni Chaojun | <span class="chinese-name">倪超骏</span></strong>
+                    </p>
+           
+                    <p>Hi! I'm Chaojun Ni, a Master's student at the <a href="https://www.pku.edu.cn/" target="_blank" rel="noopener">Complex Network Systems Lab, College of Engineering, Peking University</a>, under the supervision of Assistant Professor <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=vXj_ULkAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Wenjun Mei</a>.</p>
+
+                    <p>Currently, I am interning at <a href="https://github.com/open-gigaai" target="_blank" rel="noopener">Giga</a>, where my corporate mentor is <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=NmwjI0AAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Zheng Zhu</a>. Before joining Peking University, I completed my undergraduate studies in Computer Science and Technology at Jiangxi University of Finance and Economics, where I was advised by <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=_Tu-eHkAAAAJ" target="_blank" rel="noopener">Prof. Yuming Fang</a>.</p>
+
+                    <p>My primary research interests lie in <strong>🚗 autonomous driving</strong>, <strong>🏗️ 3D reconstruction</strong>, and <strong>🌍 world models</strong>. Additionally, I enjoy working on exciting engineering projects and participating in algorithm competitions such as Kaggle and Codeforces.</p>
+
+                    <p style="text-align:center">
+                      <a href="mailto:chaojun.ni@stu.pku.edu.cn"><span class="icon"><i class="fa fa-envelope"></i></span> <strong>Email</strong></a> |
+                      <a href="docs/cv.pdf" target="_blank" rel="noopener"><strong>CV</strong></a> |
+                      <a href="https://github.com/Nichaojun" target="_blank" rel="noopener"><span class="icon"><i class="fa fab fa-github"></i></span> <strong>GitHub</strong></a>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- News Section -->
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>📰 News</strong> <hr>
+                    
+                    <div class="news-item">
+                      <span class="news-date">[Dec 2024]</span>
+                      <span class="news-badge">NEW</span>
+                      <strong><a href="https://swiftvla.github.io">SwiftVLA</a></strong> is released! Unlocking spatiotemporal dynamics for lightweight VLA models at minimal overhead.
+                    </div>
+
+                    <div class="news-item">
+                      <span class="news-date">[Dec 2024]</span>
+                      <span class="news-badge">NEW</span>
+                      Excited to release <strong><a href="https://giga-world-0.github.io">GigaWorld-0</a></strong> and <strong><a href="https://gigabrain0.github.io">GigaBrain-0</a></strong>! World models as data engine to empower embodied AI.
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Projects Section -->
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>📑 Projects</strong> <hr>
+
+                    <!-- GigaBrain-0 -->
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr>
+                          <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one" align="center">
+                              <font color="#8B4513"><strong>arXiv 2025</strong></font>
+                              <p></p>
+                              <img src="images/gigabrain0.png" alt="GigaBrain-0" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+                            </div>
+                          </td>
+                          <td style="padding:10px;width:75%;vertical-align:middle">
+                            <a href="https://gigabrain0.github.io">
+                              <span class="morphing-text">GigaBrain-0:</span>
+                              A World Model-Powered Vision-Language-Action Model
+                            </a>
+                            <p></p>
+                            <div class="is-size-6 publication-authors">GigaBrain Team</div>
+                            <p></p>
+                            [<a href="https://gigabrain0.github.io">Project</a>]
+                            [<a href="https://arxiv.org/pdf/2510.19430">Paper</a>]
+                            <p>
+                              GigaBrain-0 is a VLA foundation model trained with large-scale data generated by world models
+                              (e.g., video generation, real2real/human/view transfer, sim2real). 
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- GigaWorld-0 -->
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr>
+                          <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one" align="center">
+                              <font color="#8B4513"><strong>arXiv 2025</strong></font>
+                              <p></p>
+                              <img src="images/gigaworld0.png" alt="GigaWorld-0" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+                            </div>
+                          </td>
+                          <td style="padding:10px;width:75%;vertical-align:middle">
+                            <a href="https://giga-world-0.github.io">
+                              <span class="morphing-text">GigaWorld-0:</span>
+                              World Models as Data Engine to Empower Embodied AI
+                            </a>
+                            <p></p>
+                            <div class="is-size-6 publication-authors">GigaBrain Team</div>
+                            <p></p>
+                            [<a href="https://giga-world-0.github.io">Project</a>]
+                            [<a href="https://arxiv.org/abs/2511.19861">arXiv</a>]
+                            [<a href="https://arxiv.org/pdf/2511.19861.pdf">Paper</a>]
+                            <p>
+                              GigaWorld-0 is a unified world-model framework built as a data engine for VLA learning.
+                              It combines GigaWorld-0-Video for controllable, temporally coherent video generation and
+                              GigaWorld-0-3D for geometry- and physics-consistent synthesis.
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Publications Section -->
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>📑 Publications</strong> <hr>
+
+                    <!-- WonderTurbo -->
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr>
+                          <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one" align="center">
+                              <font color="#8B4513"><strong>ICCV 2025</strong></font>
+                              <p></p>
+                              <img src="images/wonderturbo.png" alt="WonderTurbo Framework" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+                            </div>
+                          </td>
+                          <td style="padding:10px;width:75%;vertical-align:middle">
+                            <a href="https://wonderturbo.github.io/">
+                              <span class="morphing-text">WonderTurbo:</span> Generating Interactive 3D World in 0.72 Seconds
+                            </a>
+                            <p></p>
+                            <div class="is-size-6 publication-authors">
+                              <strong>Chaojun Ni</strong>, Xiaofeng Wang, Zheng Zhu, Weijie Wang, Haoyun Li, Guosheng Zhao, Jie Li, Wenkang Qin, Guan Huang, Wenjun Mei
+                            </div>
+                            <p></p>
+                            [<a href="https://wonderturbo.github.io/">Project</a>]
+                            [<a href="https://arxiv.org/pdf/2504.02261">Paper</a>]
+                            <p>
+                              WonderTurbo generates interactive 3D worlds in record time using a novel framework that enables fast and realistic world generation.
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- ReconDreamer -->
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr>
+                          <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one" align="center">
+                              <font color="#8B4513"><strong>CVPR 2025</strong></font>
+                              <p></p>
+                              <img src="images/recondreamer.png" alt="ReconDreamer Framework" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+                            </div>
+                          </td>
+                          <td style="padding:10px;width:75%;vertical-align:middle">
+                            <a href="https://recondreamer.github.io/">
+                              <span class="morphing-text">ReconDreamer:</span> Crafting World Models for Driving Scene Reconstruction via Online Restoration
+                            </a>
+                            <p></p>
+                            <div class="is-size-6 publication-authors">
+                              <strong>Chaojun Ni</strong>, Guosheng Zhao, Xiaofeng Wang, Zheng Zhu<span class="envelope">&#9993;</span>, et al.
+                            </div>
+                            <p></p>
+                            [<a href="https://recondreamer.github.io/">Project</a>]
+                            [<a href="https://arxiv.org/abs/2410.13571">Paper</a>]
+                            [<a href="https://github.com/GigaAI-research/ReconDreamer">Code</a>]
+                            <p>
+                              ReconDreamer enhances autonomous driving scene reconstruction by integrating world model knowledge and employing a progressive data update strategy, effectively addressing the challenges of rendering complex maneuvers.
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    
+                    <!-- FA-YOLO -->
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr>
+                          <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one" align="center">
+                              <font color="#8B4513"><strong>IEEE VCIP 2023</strong></font>
+                              <p></p>
+                              <img src="images/yolo.png" alt="FA-YOLO" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+                            </div>
+                          </td>
+                          <td style="padding:10px;width:75%;vertical-align:middle">
+                            <a href="https://ieeexplore.ieee.org/document/10402716">
+                              <span class="morphing-text">Feature Adaptive YOLO</span> for Remote Sensing Detection in Adverse Weather Conditions
+                            </a>
+                            <p></p>
+                            <div class="is-size-6 publication-authors">
+                              <strong>Chaojun Ni</strong>, Wenhui Jiang, Chao Cai, Qishou Zhu, Yuming Fang
+                            </div>
+                            <p></p>
+                            [<a href="https://github.com/Nichaojun/Feature-Adaptive-YOLO/tree/master/">Code</a>]
+                            [<a href="https://ieeexplore.ieee.org/document/10402716">Paper</a>]
+                            <p>
+                              FA-YOLO is a new framework for target detection that improves performance in adverse weather by enhancing image features and boundary clarity.
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- Thesis 2024 -->
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr>
+                          <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one" align="center">
+                              <font color="#8B4513"><strong>Thesis 2024</strong></font>
+                              <p></p>
+                              <img src="images/bishe.png" alt="Thesis" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+                            </div>
+                          </td>
+                          <td style="padding:10px;width:75%;vertical-align:middle">
+                            <a href="docs/The-Intelligent-Chess-Control-System-Based-on-Planar-Constraint-Conditions.pdf">
+                              <span class="morphing-text">The Intelligent Chess Control System</span> Based on Planar Constraint Conditions
+                            </a>
+                            <p></p>
+                            <div class="is-size-6 publication-authors">
+                              <strong>Chaojun Ni</strong>, Wenhui Jiang, Yuming Fang
+                            </div>
+                            <p></p>
+                            <span style="color: red; background-color: #fff4cc; padding: 0 4px; border-radius: 4px; font-weight: 700;">🏆 Top Ten Undergraduate Thesis (2/10), JUFE</span><br>
+                            <span style="color: red; background-color: #fff4cc; padding: 0 4px; border-radius: 4px; font-weight: 700;">🏆 Outstanding Thesis (1/5), School of Information Management</span>
+                            <p></p>
+                            [<a href="docs/The-Intelligent-Chess-Control-System-Based-on-Planar-Constraint-Conditions.pdf">Paper</a>]
+                            <p>
+                              A human-machine gaming system developed at low cost using Raspberry Pi, robotic arm, and camera, involving lightweight target detection models and gaming algorithms.
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- DriveDreamer4D -->
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr>
+                          <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one" align="center">
+                              <font color="#8B4513"><strong>CVPR 2025</strong></font>
+                              <p></p>
+                              <img src="images/drivedreamer4d.png" alt="DriveDreamer4D" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+                            </div>
+                          </td>
+                          <td style="padding:10px;width:75%;vertical-align:middle">
+                            <a href="https://drivedreamer4d.github.io/">
+                              <span class="morphing-text">DriveDreamer4D:</span> World Models Are Effective Data Machines for 4D Driving Scene Representation
+                            </a>
+                            <p></p>
+                            <div class="is-size-6 publication-authors">
+                              Guosheng Zhao, <strong>Chaojun Ni</strong>, Xiaofeng Wang, Zheng Zhu<span class="envelope">&#9993;</span>, Guan Huang, Xinze Chen, Boyuan Wang, Youyi Zhang, Wenjun Mei, Xingang Wang<span class="envelope">&#9993;</span>
+                            </div>
+                            <p></p>
+                            [<a href="https://drivedreamer4d.github.io/">Project</a>]
+                            [<a href="https://arxiv.org/abs/2410.13571">Paper</a>]
+                            [<a href="https://github.com/GigaAI-research/DriveDreamer4D/">Code</a>]
+                            <p>
+                              DriveDreamer4D uses world model priors to improve 4D driving scene representation, synthesizing novel trajectory videos with spatial-temporal consistency aligned with traffic rules.
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- ReconDreamer++ -->
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr>
+                          <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one" align="center">
+                              <font color="#8B4513"><strong>ICCV 2025</strong></font>
+                              <p></p>
+                              <img src="images/recondreamerplus.png" alt="ReconDreamer++" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+                            </div>
+                          </td>
+                          <td style="padding:10px;width:75%;vertical-align:middle">
+                            <a href="https://recondreamer-plus.github.io/">
+                              <span class="morphing-text">ReconDreamer++:</span> Harmonizing Generative and Reconstructive Models for Driving Scene Representation
+                            </a>
+                            <p></p>
+                            <div class="is-size-6 publication-authors">
+                              Guosheng Zhao, Xiaofeng Wang, <strong>Chaojun Ni</strong>, Zheng Zhu, Wenkang Qin, Guan Huang, Xingang Wang
+                            </div>
+                            <p></p>
+                            [<a href="https://recondreamer-plus.github.io/">Project</a>]
+                            [<a href="https://arxiv.org/abs/2503.18438">Paper</a>]
+                            <p>
+                              ReconDreamer++ harmonizes generative and reconstructive models to enhance driving scene representations, providing a novel approach to improve both accuracy and creativity in autonomous driving technologies.
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- HumanDreamer -->
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr>
+                          <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one" align="center">
+                              <font color="#8B4513"><strong>CVPR 2025</strong></font>
+                              <p></p>
+                              <img src="images/humandreamer.png" alt="HumanDreamer" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+                            </div>
+                          </td>
+                          <td style="padding:10px;width:75%;vertical-align:middle">
+                            <a href="https://humandreamer.github.io/">
+                              <span class="morphing-text">HumanDreamer:</span> Generating Controllable Human-Motion Videos via Decoupled Generation
+                            </a>
+                            <p></p>
+                            <div class="is-size-6 publication-authors">
+                              Boyuan Wang, Xiaofeng Wang, <strong>Chaojun Ni</strong>, Guosheng Zhao, Zhiqin Yang, Zheng Zhu, Muyang Zhang, YuKun Zhou, Xinze Chen, Guan Huang, Lihong Liu, Xingang Wang
+                            </div>
+                            <p></p>
+                            [<a href="https://humandreamer.github.io/">Project</a>]
+                            [<a href="https://arxiv.org/abs/2503.24026">Paper</a>]
+                            <p>
+                              HumanDreamer generates human-motion videos from text using a novel framework with MotionVid dataset and MotionDiT model, enhancing pose generation and supporting downstream tasks.
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
 
 
-                <p style="text-align:center">
-                  <a href="chaojun.ni@stu.pku.edu.cn">Email</a> &nbsp;/&nbsp;
-                  <a href="docs/cv.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/Nichaojun">Github</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/Nichaojun.jpg">
-                  <img style="width:100%;max-width:100%;object-fit: cover;" alt="profile photo" src="photo\5.png" class="hoverZoomLink">
-                </a>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>Research and Project</h2>
-                <p>
-                       I am interested in computer vision, deep learning, and reinforcement learning.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-        <tr onmouseout="wonderturbo_stop()" onmouseover="wonderturbo_start()">
-          <td style="padding:20px;width:25%;vertical-align:middle">
-            <div class="one">
-              <div class="two" id='wonderturbo_image'>
-                <!-- 如果有相关视频或图片，请在这里添加 -->
-                <video width=100% muted autoplay loop>
-                  <source src="images/wonderturbo.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <img src='images/wonderturbo.png' width=100%>
-            </div>
-            <script type="text/javascript">
-              function wonderturbo_start() {
-                document.getElementById('wonderturbo_image').style.opacity = "1";
-              }
+            <!-- Preprints Section -->
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>🧾 Preprints</strong> <hr>
 
-              function wonderturbo_stop() {
-                document.getElementById('wonderturbo_image').style.opacity = "0";
-              }
-              wonderturbo_stop()
-            </script>
-          </td>
-          <td style="padding:20px;width:75%;vertical-align:middle">
-            <span class="papertitle">WonderTurbo: Generating Interactive 3D World in 0.72 Seconds</span>
-            <br>
-            <a href="https://github.com/Nichaojun" style="color: blue;">Chaojun Ni</a>,
-            <a>Xiaofeng Wang</a>,
-            <a>Zheng Zhu</a>,
-            <a>Weijie Wang</a>,
-            <a>Li Haoyun</a>,
-            <a>Guosheng Zhao</a>,
-            <a>Jie Li</a>,
-            <a>Wenkang Qin</a>,
-            <a>Guan Huang</a>,
-            <a>Wenjun Mei</a>
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-              <div>
-                <!-- 假设这是发表的地方和时间 -->
-                <em>ARXIV</em>, 2025
-              </div>
-            </div>
-            <a href="https://wonderturbo.github.io/">code</a>
-            /
-            <a href="https://arxiv.org/pdf/2504.02261">paper</a>
-            <br>
-            <div class="justified-text">
-              <em>
-                WonderTurbo generates interactive 3D worlds in record time using a novel framework that enables fast and realistic world generation.
-              </em>
-            </div>
+                    <!-- SwiftVLA -->
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr>
+                          <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one" align="center">
+                              <font color="#8B4513"><strong>arXiv 2025</strong></font>
+                              <p></p>
+                              <img src="images/swiftvla.png" alt="SwiftVLA Framework" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+                            </div>
+                          </td>
+                          <td style="padding:10px;width:75%;vertical-align:middle">
+                            <a href="https://swiftvla.github.io">
+                              <span class="morphing-text">SwiftVLA:</span>
+                              Unlocking Spatiotemporal Dynamics for Lightweight VLA Models at Minimal Overhead
+                            </a>
+                            <p></p>
+                            <div class="is-size-6 publication-authors">
+                              <strong>Chaojun Ni</strong>, Cheng Chen, Xiaofeng Wang, Zheng Zhu, Boyuan Wang, Tianrun Chen, Guosheng Zhao, Haoyun Li, Zhehao Dong, Qiang Zhang, Yun Ye, Guan Huang, Wenjun Mei
+                            </div>
+                            <p></p>
+                            [<a href="https://swiftvla.github.io">Project</a>] [<a href="https://arxiv.org/pdf/2512.00903">Paper</a>]
+                            <p>
+                              SwiftVLA enhances lightweight Vision–Language–Action models with efficient 4D spatiotemporal understanding.
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- ReconDreamer-RL -->
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr>
+                          <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one" align="center">
+                              <font color="#8B4513"><strong>arXiv 2025</strong></font>
+                              <p></p>
+                              <img src="images/recondreamerrl.png" alt="ReconDreamer-RL Framework" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+                            </div>
+                          </td>
+                          <td style="padding:10px;width:75%;vertical-align:middle">
+                            <a href="https://recondreamer-rl.github.io/">
+                              <span class="morphing-text">ReconDreamer-RL:</span>
+                              Enhancing Reinforcement Learning via Diffusion-based Scene Reconstruction
+                            </a>
+                            <p></p>
+                            <div class="is-size-6 publication-authors">
+                              <strong>Chaojun Ni</strong>, Guosheng Zhao, Xiaofeng Wang, Zheng Zhu, Wenkang Qin, Xinze Chen, Guanghong Jia, Guan Huang, Wenjun Mei
+                            </div>
+                            <p></p>
+                            [<a href="https://recondreamer-rl.github.io/">Project</a>]
+                            [<a href="https://arxiv.org/pdf/2508.08170.pdf">Paper</a>]
+                            <p>
+                              ReconDreamer-RL integrates video diffusion priors into scene reconstruction to improve reinforcement learning for end-to-end autonomous driving.
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- WonderFree -->
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr>
+                          <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one" align="center">
+                              <font color="#8B4513"><strong>arXiv 2025</strong></font>
+                              <p></p>
+                              <img src="images/wonderfree.png" alt="WonderFree" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+                            </div>
+                          </td>
+                          <td style="padding:10px;width:75%;vertical-align:middle">
+                            <span class="morphing-text">WonderFree:</span> Enhancing Novel View Quality and Cross-View Consistency for 3D Scene Exploration
+                            <p></p>
+                            <div class="is-size-6 publication-authors">
+                              <strong>Chaojun Ni</strong>, Jie Li, Haoyun Li, Hengyu Liu, Xiaofeng Wang, Zheng Zhu, Guosheng Zhao, Boyuan Wang, Chenxin Li, Guan Huang, Wenjun Mei
+                            </div>
+                            <p></p>
+                            [<a href="#">Project</a>] [<a href="#">Paper</a>]
+                            <p>
+                              WonderFree proposes a method to enhance novel view synthesis quality and cross-view consistency, providing an improved experience in 3D scene exploration with enhanced realism and detail.
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Awards Section -->
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                <tr>
+                  <td style="padding:20px;width:100%;vertical-align:middle">
+                    <strong>🏆 Awards & Honors</strong> <hr>
+                    <ul style="margin: 0; padding-left: 18px;">
+                      <li><strong>Top Ten Graduation Thesis</strong>, Jiangxi University of Finance and Economics, June 2024</li>
+                      <li><strong>ACM-ICPC National Invitational</strong>, Silver Medal, April 2021</li>
+                      <li><strong>ACM-ICPC Asia Regional Contest</strong>, Bronze Medal, August 2021</li>
+                      <li><strong>Alumni Scholarship</strong>, Jiangxi University of Finance and Economics, September 2022</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
           </td>
         </tr>
+      </tbody>
+    </table>
 
+  </div>
 
-
-            <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <div class="one">
-                  <div class="two" id='nuvo_image'><video  width=100% muted autoplay loop>
-                  <source src="images/recondreamer.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                  </video>
-                  </div>
-                  <img src='images/recondreamer.png' width=100%>
-                </div>
-                <script type="text/javascript">
-                  function nuvo_start() {
-                    document.getElementById('nuvo_image').style.opacity = "1";
-                  }
-        
-                  function nuvo_stop() {
-                    document.getElementById('nuvo_image').style.opacity = "0";
-                  }
-                  nuvo_stop()
-                </script>
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                 <a href="https://recondreamer.github.io/" download>
-                  <span class="papertitle">ReconDreamer: Crafting World Models for Driving Scene Reconstruction  via Online Restoration</span>
-                </a>
-                <br>
-                  
-                <a href="https://github.com/Nichaojun" style="color: blue;">Chaojun Ni<sup>*</sup></a>,
-                <a>Guosheng Zhao<sup>*</sup></a>,
-                <a >Xiaofeng Wang<sup>*</sup></a>,
-                <a >Zheng Zhu<sup>*</sup><span class="envelope">&#9993;</span></a>,
-                etc
-                <!-- <a>Wenkang Qin</a>
-                <a>Guan Huang</a>
-                <a>Chen Liu</a>
-                <a>Yuyin Chen</a>
-                <a>Yida Wang</a>
-                <a>Xueyang Zhang</a>
-                <a>Yifei Zhan</a>
-                <a>Kun Zhan</a>
-                <a>Peng Jia</a>
-                <a>Xianpeng Lang</a>
-                <a>Xingang Wang</a>
-                <a>Wenjun Mei<span class="envelope">&#9993;</span></a>
-                <a>Xingang Wang<span class="envelope">&#9993;</span></a> -->
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-            <div>
-                <em>CVPR</em>, 2025
-            </div>
-            <div style="text-align: right;">
-                <em class="small-font">
-                    <sup>*</sup>These authors contributed equally to this work
-                </em>
-            </div>
-        </div>
-                <a href="https://github.com/GigaAI-research/ReconDreamer">code</a>
-                /
-                <a href="https://arxiv.org/abs/2410.13571">paper</a>
-                  <br>
-        <div class="justified-text">
-          <em>
-            
-ReconDreamer enhances autonomous driving scene reconstruction by integrating world model knowledge and employing a progressive data update strategy, effectively addressing the challenges of rendering complex maneuvers.
-          </em>
-        </div>
-              </td>
-            </tr>
-        
-
-            <tr onmouseout="wonderfree_stop()" onmouseover="wonderfree_start()">
-        <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one" style="display: flex; justify-content: center; align-items: center;">
-          <img src='images/wonderfree-pipeline.png' width="160">
-
-        </div>
-      </td>
-  <td style="padding:20px;width:75%;vertical-align:middle">
-    <span class="papertitle">WonderFree: Enhancing Novel View Quality and Cross-View Consistency for 3D Scene Exploration</span>
-    <br>
-    <a href="https://github.com/Nichaojun" style="color: blue;">Chaojun Ni</a>,
-    <a>Jie Li</a>,
-    <a>Haoyun Li</a>,
-    <a>Hengyu Liu</a>,
-    <a>Xiaofeng Wang</a>,
-    <a>Zheng Zhu</a>,
-    <a>Guosheng Zhao</a>,
-    <a>Boyuan Wang</a>,
-    <a>Chenxin Li</a>,
-    <a>Guan Huang</a>,
-    <a>Wenjun Mei</a>
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <div>
-        <!-- 假设这是发表的地方和时间 -->
-        <em>Arxiv</em>, 2025
-      </div>
-    </div>
-    <a href="path_to_code">code</a>
-    /
-    <a href="path_to_paper">paper</a>
-    <!-- <br> -->
-    <!-- <div class="justified-text">
-      <em>
-        WonderFree proposes a method to enhance novel view synthesis quality and cross-view consistency, providing an improved experience in 3D scene exploration with enhanced realism and detail.
-      </em>
-    </div> -->
-  </td>
-</tr>
-
-
-
-    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
-      <!-- <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='nuvo_image'><video  width=100% muted autoplay loop>
-          <source src="images/drivedream4d.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video>
-          </div>
-          <img src='images/drivedream4d.png' width=100%>
-        </div>
-        <script type="text/javascript">
-          function nuvo_start() {
-            document.getElementById('nuvo_image').style.opacity = "1";
-          }
-
-          function nuvo_stop() {
-            document.getElementById('nuvo_image').style.opacity = "0";
-          }
-          nuvo_stop()
-        </script>
-      </td> -->
-        <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one" style="display: flex; justify-content: center; align-items: center;">
-          <img src='images/drivedreamer4d-frame.png' width="160" height="130">
-
-        </div>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-         <a href="https://drivedreamer4d.github.io/" download>
-          <span class="papertitle">DriveDreamer4D: World Models Are Effective Data Machines for 4D Driving Scene Representation</span>
-        </a>
-        <br>
-          <a>Guosheng Zhao<sup>*</sup></a>
-           <a href="https://github.com/Nichaojun" style="color: blue;">Chaojun Ni<sup>*</sup></a>,
-        <a >Xiaofeng Wang<sup>*</sup></a>,
-        <a >Zheng Zhu<sup>*</sup><span class="envelope">&#9993;</span></a>,
-        <a >Guan Huang</a>,
-        <a>Xinze Chen</a>,
-        <a >Boyuan Wang</a>,
-        <a >Youyi Zhang</a>,
-        <a >Wenjun Mei</a>,
-        <a>Xingang Wang<span class="envelope">&#9993;</span></a>
-<div style="display: flex; justify-content: space-between; align-items: center;">
-    <div>
-        <em>CVPR</em>, 2025
-    </div>
-    <div style="text-align: right;">
-        <em class="small-font">
-            <sup>*</sup>These authors contributed equally to this work
-        </em>
-    </div>
-</div>
-        <a href="https://github.com/GigaAI-research/DriveDreamer4D/">code</a>
-        /
-        <a href="https://arxiv.org/abs/2410.13571">paper</a>
-          <br>
-<div class="justified-text">
-  <em>
-    This paper introduces DriveDreamer4D, which uses world model priors to improve 4D driving scene representation. It synthesizes novel trajectory videos based on real-world data, ensuring spatial-temporal consistency of elements through structured conditions, aligning closely with <br>traffic rules.
-  </em>
-</div>
-      </td>
-    </tr>
-
-
-    <tr onmouseout="recondreamer_stop()" onmouseover="recondreamer_start()">
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <div class="one">
-      <div class="two" id='recondreamer_image'>
-        <!-- 如果有相关视频或图片，请在这里添加 -->
-        <video width=100% muted autoplay loop>
-          <source src="images/recondreamer++.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <img src='images/recondreamer++.png' width=100%>
-    </div>
-    <script type="text/javascript">
-      function recondreamer_start() {
-        document.getElementById('recondreamer_image').style.opacity = "1";
-      }
-
-      function recondreamer_stop() {
-        document.getElementById('recondreamer_image').style.opacity = "0";
-      }
-      recondreamer_stop()
-    </script>
-  </td>
-  <td style="padding:20px;width:75%;vertical-align:middle">
-    <span class="papertitle">ReconDreamer++: Harmonizing Generative and Reconstructive Models for Driving Scene Representation</span>
-    <br>
-    <a>Guosheng Zhao</a>,
-    <a>Xiaofeng Wang</a>,
-    <a href="https://github.com/Nichaojun" style="color: blue;">Chaojun Ni</a>,
-    <a>Zheng Zhu</a>,
-    <a>Wenkang Qin</a>,
-    <a>Guan Huang</a>,
-    <a>Xingang Wang</a>
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <div>
-        <!-- 假设这是发表的地方和时间 -->
-        <em>Arxiv</em>, 2025
-      </div>
-    </div>
-    <a href="https://recondreamer-plus.github.io/">code</a>
-    /
-    <a href="https://arxiv.org/abs/2503.18438">paper</a>
-    <br>
-    <div class="justified-text">
-      <em>
-        ReconDreamer++ harmonizes generative and reconstructive models to enhance driving scene representations, providing a novel approach to improve both accuracy and creativity in autonomous driving technologies.
-      </em>
-    </div>
-  </td>
-</tr>
-
-  <tr onmouseout="humanmotion_stop()" onmouseover="humanmotion_start()">
-    <td style="padding:20px;width:25%;vertical-align:middle">
-      <div class="one">
-        <div class="two" id='humanmotion_image'>
-          <!-- 如果有相关视频或图片，请在这里添加 -->
-          <video width=100% muted autoplay loop>
-            <source src="images/humandreamer.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <img src='images/humandreamer.png' width=100%>
-      </div>
-      <script type="text/javascript">
-        function humanmotion_start() {
-          document.getElementById('humanmotion_image').style.opacity = "1";
-        }
-
-        function humanmotion_stop() {
-          document.getElementById('humanmotion_image').style.opacity = "0";
-        }
-        humanmotion_stop()
-      </script>
-    </td>
-    <td style="padding:20px;width:75%;vertical-align:middle">
-      <span class="papertitle">HumanDreamer: Generating Controllable Human-Motion Videos via Decoupled Generation</span>
-      <br>
-      <a>Boyuan Wang</a>,
-      <a>Xiaofeng Wang</a>,
-      <a href="https://github.com/Nichaojun" style="color: blue;">Chaojun Ni</a>,
-      <a>Guosheng Zhao</a>,
-      <a>Zhiqin Yang</a>,
-      <a> Zheng Zhu</a>,
-      <a>Muyang Zhang</a>,
-      <a>YuKun Zhou</a>,
-      <a>Xinze Chen</a>,
-      <a>Guan Huang</a>,
-      <a>lihong liu</a>,
-      <a>Xingang Wang</a>
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div>
-          <!-- 假设这是发表的地方和时间 -->
-          <em>CVPR</em>, 2025
-        </div>
-      </div>
-      <a href="https://humandreamer.github.io/">code</a>
-      /
-      <a href="https://arxiv.org/abs/2503.24026">paper</a>
-      <br>
-      <div class="justified-text">
-        <em>
-         HumanDreamer generates human-motion videos from text using a novel framework with MotionVid dataset and MotionDiT model, enhancing pose generation and supporting downstream tasks.
-        </em>
-      </div>
-    </td>
-  </tr>
-
-
-
-  <tr onmouseout="humandreamerx_stop()" onmouseover="humandreamerx_start()">
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <div class="one">
-      <div class="two" id='humandreamerx_image'>
-        <!-- 如果有相关视频或图片，请在这里添加 -->
-        <video width=100% muted autoplay loop>
-          <source src="images/humandreamerx.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <img src='images/humandreamerx.png' width=100%>
-    </div>
-    <script type="text/javascript">
-      function humandreamerx_start() {
-        document.getElementById('humandreamerx_image').style.opacity = "1";
-      }
-
-      function humandreamerx_stop() {
-        document.getElementById('humandreamerx_image').style.opacity = "0";
-      }
-      humandreamerx_stop()
-    </script>
-  </td>
-  <td style="padding:20px;width:75%;vertical-align:middle">
-    <span class="papertitle">HumanDreamer-X: Photorealistic Single-image Human Avatars Reconstruction via Gaussian Restoration</span>
-    <br>
-    <a>Boyuan Wang</a>,
-    <a>Runqi Ouyang</a>,
-    <a>Xiaofeng Wang</a>,
-    <a>Zheng Zhu</a>,
-    <a>Guosheng Zhao</a>,
-    <a href="https://github.com/Nichaojun" style="color: blue;">Chaojun Ni</a>,
-    <a>Guan Huang</a>,
-    <a>lihong liu</a>,
-    <a>Xingang Wang</a>
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-      <div>
-        <!-- 假设这是发表的地方和时间 -->
-        <em>Arxiv</em>, 2025
-      </div>
-    </div>
-    <a href="https://humandreamer-x.github.io/">code</a>
-    /
-    <a href="https://arxiv.org/pdf/2504.03536">paper</a>
-    <br>
-    <div class="justified-text">
-      <em>
-        HumanDreamer-X presents a novel Gaussian restoration framework for reconstructing photorealistic 3D human avatars from a single image, significantly improving quality and realism in avatar generation tasks.
-      </em>
-    </div>
-  </td>
-</tr>
-
-
-
-    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='nuvo_image'><video  width=100% muted autoplay loop>
-          <source src="images/robort.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video>
-          </div>
-          <img src='images/robort.png' width=100%>
-        </div>
-        <script type="text/javascript">
-          function nuvo_start() {
-            document.getElementById('nuvo_image').style.opacity = "1";
-          }
-
-          function nuvo_stop() {
-            document.getElementById('nuvo_image').style.opacity = "0";
-          }
-          nuvo_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-         <a href="docs/The-Intelligent-Chess-Control-System-Based-on-Planar-Constraint-Conditions.pdf" download>
-          <span class="papertitle">The Intelligent Chess Control System Based on Planar Constraint Conditions</span>
-        </a>
-        <br>
-           <a href="https://github.com/Nichaojun" style="color: blue;">Chaojun Ni</a>,
-           <a href="https://scholar.google.com/citations?hl=zh-CN&user=pAzm-UcAAAAJ&view_op=list_works&sortby=pubdate" style="color: blue;">Wenhui Jiang</a>,
-          <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=_Tu-eHkAAAAJ" style="color: blue;">Yuming Fang</a>
-        <br>
-        <em>Top Ten Undergraduate Theses of Jiangxi University of Finance and Economics (2/10)</em><br>
-        <em>Outstanding Thesis of the School of Information Management, Jiangxi University of Finance and Economics (1/5)</em>
-        <br>
-        <p></p>
-        <p>
-          A human-machine gaming system has been developed at a low cost using a Raspberry Pi, a robotic arm, and a camera. This project involves lightweight target detection models and gaming algorithms.
-        </p>
-      </td>
-    </tr>
-
-
-    <tr onmouseout="cat3d_stop()" onmouseover="cat3d_start()" >
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one" style="display: flex; justify-content: center; align-items: center;">
-          <img src='images/1.1.jpg' width="160">
-
-        </div>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="docs/Feature-Adaptive-YOLO-for-Remote-Sensing-Detection-in-Adverse-Weather-Conditions.pdf" download>
-			<span class="papertitle">Feature Adaptive YOLO for remote sensing detection in adverse weather conditions</span>
-        </a>
-        <br>
-               <a href="https://github.com/Nichaojun" style="color: blue;">Chaojun Ni</a>,
-               <a href="https://scholar.google.com/citations?hl=zh-CN&user=pAzm-UcAAAAJ&view_op=list_works&sortby=pubdate" style="color: blue;">Wenhui Jiang</a>,
-                <a>Chao Cai</a>,
-                <a>Qishou Zhu</a>,
-                <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=_Tu-eHkAAAAJ"  style="color: blue;">Yuming Fang</a>,
-
-        <br>
-        <em>IEEE VCIP</em>, 2023
-        <br>
-        <a href="https://github.com/Nichaojun/Feature-Adaptive-YOLO/tree/master/">code</a>
-        /
-        <a href="https://ieeexplore.ieee.org/document/10402716">paper</a>
-        <p></p>
-        <p>
-				This study introduces Feature Adaptive YOLO (FA-YOLO), a new framework for target detection that improves performance in adverse weather by enhancing image features<br> and boundary clarity.
-        </p>
-      </td>
-    </tr>
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-                <tbody>
-                    <tr>
-                      <td>
-                        <h2>Reward</h2>
-                      </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table width="100%" align="center" border="0" cellpadding="20">
-            <ul>
-                <li>Jiangxi University of Finance and Economics Top Ten Graduation Thesis, June 2024</li>
-                <li>ACM International Collegiate Programming Contest National Invitational, Silver Medal, April 2021</li>
-                <li>ACM International Collegiate Programming Contest Asia Regional Contest, Bronze Medal, August 2021</li>
-                <li>Mathematical Contest in Modeling (MCM) in the U.S., Meritorious Winner, January 2022</li>
-                <li>Lanqiao Cup National Software and Information Technology Professional Talent Competition, National Second Prize, May 2022</li>
-                <li>Jiangxi University of Finance and Economics Alumni Scholarship, September 2022</li>
-            </ul>
-            </table>
-
-<!--        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">-->
-<!--            <tbody>-->
-<!--                <tr>-->
-<!--                  <td>-->
-<!--                    <h2>Photo</h2>-->
-<!--                  </td>-->
-<!--                </tr>-->
-<!--            </tbody>-->
-<!--        </table>-->
-
-<!--        <table width="100%" align="center" border="0" cellpadding="20">-->
-<!--            <tbody>-->
-<!--                    <tr>-->
-<!--                      &lt;!&ndash; First and fourth images &ndash;&gt;-->
-<!--                      <td align="center">-->
-<!--                        <figure style="margin: 0;">-->
-<!--                          <img src="photo/1.jpg" alt="Competition Photo 1" style="width: 300px; height: 200px;">-->
-<!--                          <figcaption style="margin-top: 0;">Figure 1: My friends Luo Wenhao, Li Menghao, and I participated in the ACM Xi'an Regional Contest.</figcaption>-->
-<!--                        </figure>-->
-<!--                      </td>-->
-<!--                      <td align="center">-->
-<!--                        <figure style="margin: 0;">-->
-<!--                          <img src="photo/4.jpg" alt="Competition Photo 2" style="width: 300px; height: 200px;">-->
-<!--                          <figcaption style="margin-top: 0;">Figure 2: We won a silver medal!</figcaption>-->
-<!--                        </figure>-->
-<!--                      </td>-->
-<!--                    </tr>-->
-<!--                <tr>-->
-<!--                    <td align="center">-->
-<!--                        <figure>-->
-<!--                            <img src="photo/2.jpg" alt="Beijing Competition" style="width: 300px; height: 200px;">-->
-<!--                            <figcaption>Figure 2: We participated in a competition at the University of Macau!</figcaption>-->
-<!--                        </figure>-->
-<!--                    </td>-->
-<!--                    <td align="center">-->
-<!--                        <figure>-->
-<!--                            <img src="photo/3.jpg" alt="Eating Photo" style="width: 300px; height: 200px;">-->
-<!--                            <figcaption>Figure 3: A photo with my mentor, Jiang Wenhui, from the year I graduated with my bachelor's degree.</figcaption>-->
-<!--                        </figure>-->
-<!--                    </td>-->
-<!--                </tr>-->
-<!--            </tbody>-->
-<!--        </table>-->
+</body>
 </html>
