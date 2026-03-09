@@ -24,7 +24,7 @@
                 </p>
 
                 <p style="text-align: justify;">
-                    I am a Master’s student at the Complex Network Systems Lab, College of Engineering, Peking University, under the supervision of Assistant Professor <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=vXj_ULkAAAAJ&view_op=list_works&sortby=pubdate" style="color: blue;">Wenjun Mei</a>. Currently, I am interning at Giga, where my corporate mentor is <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=NmwjI0AAAAAJ&view_op=list_works&sortby=pubdate" style="color: blue;">Zhu Zheng</a>.<br><br>
+                    I am a Master's student at the Complex Network Systems Lab, College of Engineering, Peking University, under the supervision of Assistant Professor <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=vXj_ULkAAAAJ&view_op=list_works&sortby=pubdate" style="color: blue;">Wenjun Mei</a>. Currently, I am interning at Giga, where my corporate mentor is <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=NmwjI0AAAAAJ&view_op=list_works&sortby=pubdate" style="color: blue;">Zhu Zheng</a>.<br><br>
 
                     Before joining Peking University, I completed my undergraduate studies in Computer Science and Technology at Jiangxi University of Finance and Economics, where I was advised by <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=_Tu-eHkAAAAJ" style="color: blue;">Prof. Yuming Fang</a>.<br><br>
 
@@ -62,7 +62,6 @@
           <td style="padding:20px;width:25%;vertical-align:middle">
             <div class="one">
               <div class="two" id='wonderturbo_image'>
-                <!-- 如果有相关视频或图片，请在这里添加 -->
                 <video width=100% muted autoplay loop>
                   <source src="images/wonderturbo.mp4" type="video/mp4">
                   Your browser does not support the video tag.
@@ -96,7 +95,6 @@
             <a>Wenjun Mei</a>
             <div style="display: flex; justify-content: space-between; align-items: center;">
               <div>
-                <!-- 假设这是发表的地方和时间 -->
                 <em>ARXIV</em>, 2025
               </div>
             </div>
@@ -112,6 +110,106 @@
           </td>
         </tr>
 
+
+        <!-- ===== GigaBrain-0.5M ===== -->
+        <tr onmouseout="gigabrain_stop()" onmouseover="gigabrain_start()">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <div class="two" id='gigabrain_image'>
+                <video width=100% muted autoplay loop>
+                  <source src="images/gigabrain.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <img src='images/gigabrain.png' width=100%>
+            </div>
+            <script type="text/javascript">
+              function gigabrain_start() {
+                document.getElementById('gigabrain_image').style.opacity = "1";
+              }
+
+              function gigabrain_stop() {
+                document.getElementById('gigabrain_image').style.opacity = "0";
+              }
+              gigabrain_stop()
+            </script>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <span class="papertitle">GigaBrain-0.5M: a VLA That Learns From World Model-Based Reinforcement Learning</span>
+            <br>
+            GB Team,
+            <a>B Wang</a>,
+            <a href="https://github.com/Nichaojun" style="color: blue;">C Ni</a>,
+            <a>G Huang</a>,
+            <a>G Zhao</a>,
+            <a>H Li</a>,
+            <a>J Li</a>,
+            <a>J Lv</a>,
+            <a>J Liu</a>,
+            <a>L Feng</a>,
+            et al.
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <em>Arxiv</em>, 2025
+              </div>
+            </div>
+            <a href="#">code</a>
+            /
+            <a href="#">paper</a>
+            <br>
+            <div class="justified-text">
+              <em>
+                GigaBrain-0.5M is a Vision-Language-Action model that leverages world model-based reinforcement learning to enable efficient and generalizable robot manipulation with only 0.5M parameters.
+              </em>
+            </div>
+          </td>
+        </tr>
+
+
+        <!-- ===== SwiftVLA ===== -->
+        <tr onmouseout="swiftvla_stop()" onmouseover="swiftvla_start()">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <div class="two" id='swiftvla_image'>
+                <video width=100% muted autoplay loop>
+                  <source src="images/swiftvla.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <img src='images/swiftvla.png' width=100%>
+            </div>
+            <script type="text/javascript">
+              function swiftvla_start() {
+                document.getElementById('swiftvla_image').style.opacity = "1";
+              }
+
+              function swiftvla_stop() {
+                document.getElementById('swiftvla_image').style.opacity = "0";
+              }
+              swiftvla_stop()
+            </script>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <span class="papertitle">SwiftVLA: A Fast and Efficient Vision-Language-Action Model</span>
+            <br>
+            <a href="https://github.com/Nichaojun" style="color: blue;">Chaojun Ni</a>,
+            et al.
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <em>CVPR</em>, 2025
+              </div>
+            </div>
+            <a href="#">code</a>
+            /
+            <a href="#">paper</a>
+            <br>
+            <div class="justified-text">
+              <em>
+                SwiftVLA presents a fast and efficient Vision-Language-Action model for robot manipulation, achieving state-of-the-art performance with significantly reduced inference latency.
+              </em>
+            </div>
+          </td>
+        </tr>
 
 
             <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
@@ -146,19 +244,6 @@
                 <a >Xiaofeng Wang<sup>*</sup></a>,
                 <a >Zheng Zhu<sup>*</sup><span class="envelope">&#9993;</span></a>,
                 etc
-                <!-- <a>Wenkang Qin</a>
-                <a>Guan Huang</a>
-                <a>Chen Liu</a>
-                <a>Yuyin Chen</a>
-                <a>Yida Wang</a>
-                <a>Xueyang Zhang</a>
-                <a>Yifei Zhan</a>
-                <a>Kun Zhan</a>
-                <a>Peng Jia</a>
-                <a>Xianpeng Lang</a>
-                <a>Xingang Wang</a>
-                <a>Wenjun Mei<span class="envelope">&#9993;</span></a>
-                <a>Xingang Wang<span class="envelope">&#9993;</span></a> -->
         <div style="display: flex; justify-content: space-between; align-items: center;">
             <div>
                 <em>CVPR</em>, 2025
@@ -206,45 +291,18 @@ ReconDreamer enhances autonomous driving scene reconstruction by integrating wor
     <a>Wenjun Mei</a>
     <div style="display: flex; justify-content: space-between; align-items: center;">
       <div>
-        <!-- 假设这是发表的地方和时间 -->
         <em>Arxiv</em>, 2025
       </div>
     </div>
     <a href="path_to_code">code</a>
     /
     <a href="path_to_paper">paper</a>
-    <!-- <br> -->
-    <!-- <div class="justified-text">
-      <em>
-        WonderFree proposes a method to enhance novel view synthesis quality and cross-view consistency, providing an improved experience in 3D scene exploration with enhanced realism and detail.
-      </em>
-    </div> -->
   </td>
 </tr>
 
 
 
     <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
-      <!-- <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='nuvo_image'><video  width=100% muted autoplay loop>
-          <source src="images/drivedream4d.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video>
-          </div>
-          <img src='images/drivedream4d.png' width=100%>
-        </div>
-        <script type="text/javascript">
-          function nuvo_start() {
-            document.getElementById('nuvo_image').style.opacity = "1";
-          }
-
-          function nuvo_stop() {
-            document.getElementById('nuvo_image').style.opacity = "0";
-          }
-          nuvo_stop()
-        </script>
-      </td> -->
         <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one" style="display: flex; justify-content: center; align-items: center;">
           <img src='images/drivedreamer4d-frame.png' width="160" height="130">
@@ -293,7 +351,6 @@ ReconDreamer enhances autonomous driving scene reconstruction by integrating wor
   <td style="padding:20px;width:25%;vertical-align:middle">
     <div class="one">
       <div class="two" id='recondreamer_image'>
-        <!-- 如果有相关视频或图片，请在这里添加 -->
         <video width=100% muted autoplay loop>
           <source src="images/recondreamer++.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -324,7 +381,6 @@ ReconDreamer enhances autonomous driving scene reconstruction by integrating wor
     <a>Xingang Wang</a>
     <div style="display: flex; justify-content: space-between; align-items: center;">
       <div>
-        <!-- 假设这是发表的地方和时间 -->
         <em>Arxiv</em>, 2025
       </div>
     </div>
@@ -344,7 +400,6 @@ ReconDreamer enhances autonomous driving scene reconstruction by integrating wor
     <td style="padding:20px;width:25%;vertical-align:middle">
       <div class="one">
         <div class="two" id='humanmotion_image'>
-          <!-- 如果有相关视频或图片，请在这里添加 -->
           <video width=100% muted autoplay loop>
             <source src="images/humandreamer.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -380,7 +435,6 @@ ReconDreamer enhances autonomous driving scene reconstruction by integrating wor
       <a>Xingang Wang</a>
       <div style="display: flex; justify-content: space-between; align-items: center;">
         <div>
-          <!-- 假设这是发表的地方和时间 -->
           <em>CVPR</em>, 2025
         </div>
       </div>
@@ -402,7 +456,6 @@ ReconDreamer enhances autonomous driving scene reconstruction by integrating wor
   <td style="padding:20px;width:25%;vertical-align:middle">
     <div class="one">
       <div class="two" id='humandreamerx_image'>
-        <!-- 如果有相关视频或图片，请在这里添加 -->
         <video width=100% muted autoplay loop>
           <source src="images/humandreamerx.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -435,7 +488,6 @@ ReconDreamer enhances autonomous driving scene reconstruction by integrating wor
     <a>Xingang Wang</a>
     <div style="display: flex; justify-content: space-between; align-items: center;">
       <div>
-        <!-- 假设这是发表的地方和时间 -->
         <em>Arxiv</em>, 2025
       </div>
     </div>
@@ -503,7 +555,7 @@ ReconDreamer enhances autonomous driving scene reconstruction by integrating wor
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
         <a href="docs/Feature-Adaptive-YOLO-for-Remote-Sensing-Detection-in-Adverse-Weather-Conditions.pdf" download>
-			<span class="papertitle">Feature Adaptive YOLO for remote sensing detection in adverse weather conditions</span>
+		  <span class="papertitle">Feature Adaptive YOLO for remote sensing detection in adverse weather conditions</span>
         </a>
         <br>
                <a href="https://github.com/Nichaojun" style="color: blue;">Chaojun Ni</a>,
@@ -520,7 +572,7 @@ ReconDreamer enhances autonomous driving scene reconstruction by integrating wor
         <a href="https://ieeexplore.ieee.org/document/10402716">paper</a>
         <p></p>
         <p>
-				This study introduces Feature Adaptive YOLO (FA-YOLO), a new framework for target detection that improves performance in adverse weather by enhancing image features<br> and boundary clarity.
+		  This study introduces Feature Adaptive YOLO (FA-YOLO), a new framework for target detection that improves performance in adverse weather by enhancing image features<br> and boundary clarity.
         </p>
       </td>
     </tr>
@@ -545,47 +597,4 @@ ReconDreamer enhances autonomous driving scene reconstruction by integrating wor
             </ul>
             </table>
 
-<!--        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">-->
-<!--            <tbody>-->
-<!--                <tr>-->
-<!--                  <td>-->
-<!--                    <h2>Photo</h2>-->
-<!--                  </td>-->
-<!--                </tr>-->
-<!--            </tbody>-->
-<!--        </table>-->
-
-<!--        <table width="100%" align="center" border="0" cellpadding="20">-->
-<!--            <tbody>-->
-<!--                    <tr>-->
-<!--                      &lt;!&ndash; First and fourth images &ndash;&gt;-->
-<!--                      <td align="center">-->
-<!--                        <figure style="margin: 0;">-->
-<!--                          <img src="photo/1.jpg" alt="Competition Photo 1" style="width: 300px; height: 200px;">-->
-<!--                          <figcaption style="margin-top: 0;">Figure 1: My friends Luo Wenhao, Li Menghao, and I participated in the ACM Xi'an Regional Contest.</figcaption>-->
-<!--                        </figure>-->
-<!--                      </td>-->
-<!--                      <td align="center">-->
-<!--                        <figure style="margin: 0;">-->
-<!--                          <img src="photo/4.jpg" alt="Competition Photo 2" style="width: 300px; height: 200px;">-->
-<!--                          <figcaption style="margin-top: 0;">Figure 2: We won a silver medal!</figcaption>-->
-<!--                        </figure>-->
-<!--                      </td>-->
-<!--                    </tr>-->
-<!--                <tr>-->
-<!--                    <td align="center">-->
-<!--                        <figure>-->
-<!--                            <img src="photo/2.jpg" alt="Beijing Competition" style="width: 300px; height: 200px;">-->
-<!--                            <figcaption>Figure 2: We participated in a competition at the University of Macau!</figcaption>-->
-<!--                        </figure>-->
-<!--                    </td>-->
-<!--                    <td align="center">-->
-<!--                        <figure>-->
-<!--                            <img src="photo/3.jpg" alt="Eating Photo" style="width: 300px; height: 200px;">-->
-<!--                            <figcaption>Figure 3: A photo with my mentor, Jiang Wenhui, from the year I graduated with my bachelor's degree.</figcaption>-->
-<!--                        </figure>-->
-<!--                    </td>-->
-<!--                </tr>-->
-<!--            </tbody>-->
-<!--        </table>-->
 </html>
