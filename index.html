@@ -29,7 +29,6 @@
     margin-right: auto;
   }
   
-  /* Purple-yellow gradient border with white background */
   .gradient-box {
     background: white;
     border-radius: 20px;
@@ -45,7 +44,6 @@
     position: relative;
   }
 
-  /* Corner stars decoration */
   .gradient-box::before,
   .gradient-box::after {
     content: "⭐";
@@ -105,7 +103,6 @@
     }
   }
   
-  /* News item styling */
   .news-item {
     background: linear-gradient(135deg, 
       rgba(255, 215, 0, 0.08) 0%,
@@ -143,7 +140,18 @@
     vertical-align: middle;
   }
 
-  /* Enhanced publication boxes */
+  .news-badge-cvpr {
+    display: inline-block;
+    background: linear-gradient(135deg, #9370DB, #8A2BE2);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
   .publication-box {
     background: linear-gradient(135deg, 
       rgba(218, 165, 32, 0.1) 0%,
@@ -208,13 +216,25 @@
                   <td>
                     <strong>📰 News</strong> <hr>
 
-                    
+                    <!-- SwiftVLA CVPR accepted -->
                     <div class="news-item">
-                    <span class="news-date">[Dec 2024]</span>
-                    <span class="news-badge">NEW</span>
-                    <strong><a href="https://swiftvla.github.io">SwiftVLA</a></strong> is released! Unlocking enhanced spatiotemporal reasoning for lightweight VLA models, offering exceptional performance on <strong>Orin edge devices</strong> with significantly reduced latency and memory usage.
+                      <span class="news-date">[Mar 2025]</span>
+                      <span class="news-badge-cvpr">CVPR 2025</span>
+                      🎉 <strong><a href="https://swiftvla.github.io">SwiftVLA</a></strong> has been accepted to <strong>CVPR 2025</strong>!
                     </div>
 
+                    <!-- GigaBrain-0.5M -->
+                    <div class="news-item">
+                      <span class="news-date">[Mar 2025]</span>
+                      <span class="news-badge">NEW</span>
+                      Excited to release <strong>GigaBrain-0.5M</strong>: a VLA that learns from world model-based reinforcement learning!
+                    </div>
+
+                    <div class="news-item">
+                      <span class="news-date">[Dec 2024]</span>
+                      <span class="news-badge">NEW</span>
+                      <strong><a href="https://swiftvla.github.io">SwiftVLA</a></strong> is released! Unlocking enhanced spatiotemporal reasoning for lightweight VLA models, offering exceptional performance on <strong>Orin edge devices</strong> with significantly reduced latency and memory usage.
+                    </div>
 
                     <div class="news-item">
                       <span class="news-date">[Dec 2024]</span>
@@ -232,6 +252,37 @@
                 <tr>
                   <td>
                     <strong>📑 Projects</strong> <hr>
+
+                    <!-- GigaBrain-0.5M (NEW) -->
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr>
+                          <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one" align="center">
+                              <font color="#8B4513"><strong>arXiv 2025</strong></font>
+                              <p></p>
+                              <img src="images/gigabrain05m.png" alt="GigaBrain-0.5M" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+                            </div>
+                          </td>
+                          <td style="padding:10px;width:75%;vertical-align:middle">
+                            <a href="#">
+                              <span class="morphing-text">GigaBrain-0.5M:</span>
+                              A VLA That Learns From World Model-Based Reinforcement Learning
+                            </a>
+                            <p></p>
+                            <div class="is-size-6 publication-authors">
+                              GB Team, B Wang, <strong>C Ni</strong>, G Huang, G Zhao, H Li, J Li, J Lv, J Liu, L Feng, et al.
+                            </div>
+                            <p></p>
+                            [<a href="#">Project</a>]
+                            [<a href="#">Paper</a>]
+                            <p>
+                              GigaBrain-0.5M is a compact Vision-Language-Action model that leverages world model-based reinforcement learning to achieve efficient and generalizable robot manipulation, demonstrating strong performance with only 0.5M parameters.
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
 
                     <!-- GigaBrain-0 -->
                     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -306,6 +357,37 @@
                   <td>
                     <strong>📑 Publications</strong> <hr>
 
+                    <!-- SwiftVLA (moved from Preprints, now CVPR 2025) -->
+                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                      <tbody>
+                        <tr>
+                          <td style="padding:20px;width:25%;vertical-align:middle">
+                            <div class="one" align="center">
+                              <font color="#8B4513"><strong>CVPR 2025</strong></font>
+                              <p></p>
+                              <img src="images/swiftvla.png" alt="SwiftVLA Framework" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+                            </div>
+                          </td>
+                          <td style="padding:10px;width:75%;vertical-align:middle">
+                            <a href="https://swiftvla.github.io">
+                              <span class="morphing-text">SwiftVLA:</span>
+                              Unlocking Spatiotemporal Dynamics for Lightweight VLA Models at Minimal Overhead
+                            </a>
+                            <p></p>
+                            <div class="is-size-6 publication-authors">
+                              <strong>Chaojun Ni</strong>, Cheng Chen, Xiaofeng Wang, Zheng Zhu, Boyuan Wang, Tianrun Chen, Guosheng Zhao, Haoyun Li, Zhehao Dong, Qiang Zhang, Yun Ye, Guan Huang, Wenjun Mei
+                            </div>
+                            <p></p>
+                            [<a href="https://swiftvla.github.io">Project</a>]
+                            [<a href="https://arxiv.org/pdf/2512.00903">Paper</a>]
+                            <p>
+                              SwiftVLA enhances lightweight Vision–Language–Action models with efficient 4D spatiotemporal understanding, offering exceptional performance on <strong>Orin edge devices</strong> with significantly reduced latency and memory usage.
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
                     <!-- WonderTurbo -->
                     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                       <tbody>
@@ -366,7 +448,6 @@
                       </tbody>
                     </table>
 
-                    
                     <!-- FA-YOLO -->
                     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                       <tbody>
@@ -519,8 +600,6 @@
                       </tbody>
                     </table>
 
-
-
                   </td>
                 </tr>
               </tbody>
@@ -532,36 +611,6 @@
                 <tr>
                   <td>
                     <strong>🧾 Preprints</strong> <hr>
-
-                    <!-- SwiftVLA -->
-                    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                      <tbody>
-                        <tr>
-                          <td style="padding:20px;width:25%;vertical-align:middle">
-                            <div class="one" align="center">
-                              <font color="#8B4513"><strong>arXiv 2025</strong></font>
-                              <p></p>
-                              <img src="images/swiftvla.png" alt="SwiftVLA Framework" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
-                            </div>
-                          </td>
-                          <td style="padding:10px;width:75%;vertical-align:middle">
-                            <a href="https://swiftvla.github.io">
-                              <span class="morphing-text">SwiftVLA:</span>
-                              Unlocking Spatiotemporal Dynamics for Lightweight VLA Models at Minimal Overhead
-                            </a>
-                            <p></p>
-                            <div class="is-size-6 publication-authors">
-                              <strong>Chaojun Ni</strong>, Cheng Chen, Xiaofeng Wang, Zheng Zhu, Boyuan Wang, Tianrun Chen, Guosheng Zhao, Haoyun Li, Zhehao Dong, Qiang Zhang, Yun Ye, Guan Huang, Wenjun Mei
-                            </div>
-                            <p></p>
-                            [<a href="https://swiftvla.github.io">Project</a>] [<a href="https://arxiv.org/pdf/2512.00903">Paper</a>]
-                            <p>
-                              SwiftVLA enhances lightweight Vision–Language–Action models with efficient 4D spatiotemporal understanding.
-                            </p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
 
                     <!-- ReconDreamer-RL -->
                     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
